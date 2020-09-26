@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".view.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -17,8 +17,9 @@
         </activity>
 
         <!-- Parent activity means we will have back button in top of activity and go to the specified activity -->
-        <activity android:name=".FirstActivity" android:parentActivityName=".MainActivity"/>
-        <activity android:name=".SecondActivity" android:parentActivityName=".FirstActivity"/>
+        <activity android:name=".view.FirstActivity" android:parentActivityName=".view.MainActivity"/>
+        <activity android:name=".view.SecondActivity" android:parentActivityName=".view.FirstActivity"/>
+        <activity android:name=".view.RecyclerViewActivity" android:parentActivityName=".view.MainActivity"/>
     </application>
 
 </manifest>

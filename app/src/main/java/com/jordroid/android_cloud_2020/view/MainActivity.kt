@@ -1,8 +1,9 @@
-package com.jordroid.android_cloud_2020
+package com.jordroid.android_cloud_2020.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.jordroid.android_cloud_2020.R
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -13,6 +14,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         mainButtonActivityIntent.setOnClickListener { goToActivityIntent() }
+        mainButtonRecyclerView.setOnClickListener { goToRecyclerView() }
     }
 
     /**
@@ -20,5 +22,9 @@ class MainActivity : AppCompatActivity() {
      */
     private fun goToActivityIntent() {
         startActivity(Intent(this, FirstActivity::class.java))
+    }
+
+    private fun goToRecyclerView() {
+        startActivity(Intent(this, RecyclerViewActivity::class.java))
     }
 }

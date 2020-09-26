@@ -1,8 +1,9 @@
-package com.jordroid.android_cloud_2020
+package com.jordroid.android_cloud_2020.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.jordroid.android_cloud_2020.R
 import kotlinx.android.synthetic.main.activity_first.*
 
 class FirstActivity : AppCompatActivity() {

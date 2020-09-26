@@ -1,4 +1,4 @@
-package com.jordroid.android_cloud_2020
+package com.jordroid.android_cloud_2020.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
