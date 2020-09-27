@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
 
         mainButtonActivityIntent.setOnClickListener { goToActivityIntent() }
         mainButtonRecyclerView.setOnClickListener { goToRecyclerView() }
+        mainButtonActivityChain.setOnClickListener { goToChainConstraint() }
     }
 
     /**
@@ -26,5 +27,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun goToRecyclerView() {
         startActivity(Intent(this, RecyclerViewActivity::class.java))
+    }
+
+    private fun goToChainConstraint() {
+        startActivity(Intent(this, ChainConstraintActivity::class.java))
     }
 }
