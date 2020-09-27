@@ -21,6 +21,7 @@
         <activity android:name=".view.SecondActivity" android:parentActivityName=".view.FirstActivity"/>
         <activity android:name=".view.RecyclerViewActivity" android:parentActivityName=".view.MainActivity"/>
         <activity android:name=".view.ChainConstraintActivity" android:parentActivityName=".view.MainActivity"/>
+        <activity android:name=".view.StringsActivity" android:parentActivityName=".view.MainActivity"/>
     </application>
 
 </manifest>

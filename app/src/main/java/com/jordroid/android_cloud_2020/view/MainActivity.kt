@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         mainButtonActivityIntent.setOnClickListener { goToActivityIntent() }
         mainButtonRecyclerView.setOnClickListener { goToRecyclerView() }
         mainButtonActivityChain.setOnClickListener { goToChainConstraint() }
+        mainButtonActivityStrings.setOnClickListener { goToString() }
     }
 
     /**
@@ -31,5 +32,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun goToChainConstraint() {
         startActivity(Intent(this, ChainConstraintActivity::class.java))
+    }
+
+    private fun goToString() {
+        startActivity(Intent(this, StringsActivity::class.java))
     }
 }
