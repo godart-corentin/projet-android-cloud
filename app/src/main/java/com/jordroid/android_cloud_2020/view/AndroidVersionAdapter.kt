@@ -4,8 +4,10 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.jordroid.android_cloud_2020.R
 import com.jordroid.android_cloud_2020.model.ObjectDataSample
 
@@ -37,6 +39,11 @@ class AndroidVersionAdapter(private val context : Context) : RecyclerView.Adapte
         // Set the value of our POJO for each item
         holder.itemRecyclerViewVersionName.text = currentItem.versionName
         holder.itemRecyclerViewVersionCode.text = currentItem.versionCode.toString()
+        // Use glide to display image from url
+        Glide.with(context)
+            .load(currentItem.versionImage)
+            .placeholder(R.drawable.ic_launcher_background)
+            .into(holder.itemRecyclerViewVersionImage)
     }
 
     /**
@@ -58,5 +65,6 @@ class AndroidVersionAdapter(private val context : Context) : RecyclerView.Adapte
     inner class AndroidVersionViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
         val itemRecyclerViewVersionName: TextView = itemView.findViewById(R.id.itemRecyclerViewVersionName)
         val itemRecyclerViewVersionCode: TextView = itemView.findViewById(R.id.itemRecyclerViewVersionCode)
+        val itemRecyclerViewVersionImage: ImageView = itemView.findViewById(R.id.itemRecyclerViewVersionImage)
     }
 }
