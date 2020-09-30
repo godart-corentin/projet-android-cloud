@@ -52,7 +52,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Strings"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/mainButtonActivityValuesLand"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/mainButtonActivityResource"
         app:layout_constraintTop_toBottomOf="@id/mainButtonActivityChain" />
@@ -62,9 +62,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Ressources"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/mainButtonActivityValuesLand"
         app:layout_constraintLeft_toRightOf="@+id/mainButtonActivityStrings"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/mainButtonActivityChain" />
+
+    <Button
+        android:id="@+id/mainButtonActivityValuesLand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Values land"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mainButtonActivityStrings" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

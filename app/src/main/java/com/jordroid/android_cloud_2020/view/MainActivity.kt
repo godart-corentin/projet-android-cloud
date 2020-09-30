@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         mainButtonActivityChain.setOnClickListener { goToChainConstraint() }
         mainButtonActivityStrings.setOnClickListener { goToString() }
         mainButtonActivityResource.setOnClickListener { goToResources() }
+        mainButtonActivityValuesLand.setOnClickListener { goToValuesLand() }
     }
 
     /**
@@ -41,5 +42,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun goToResources() {
         startActivity(Intent(this, ResourceActivity::class.java))
+    }
+
+    private fun goToValuesLand() {
+        startActivity(Intent(this, ValuesLandActivity::class.java))
     }
 }
