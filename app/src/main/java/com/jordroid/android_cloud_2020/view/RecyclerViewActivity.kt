@@ -72,7 +72,7 @@ class RecyclerViewActivity : AppCompatActivity() {
                 "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Android_P_logo.svg/1200px-Android_P_logo.svg.png"
             ),
             ObjectDataSample(
-                "Android-Q",
+                "Android Q",
                 10,
                 "https://images.frandroid.com/wp-content/uploads/2018/05/android-q-developer-preview-logo.jpg"
             )
