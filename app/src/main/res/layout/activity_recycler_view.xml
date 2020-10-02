@@ -14,6 +14,7 @@
         android:layout_margin="8dp"
         android:fadingEdgeLength="64dp"
         android:requiresFadingEdge="vertical"
+        android:layoutAnimation="@anim/item_animation_layout"
         app:layout_constraintBottom_toTopOf="@+id/buttonAddItem"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -23,11 +24,22 @@
 
     <Button
         android:id="@+id/buttonAddItem"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_margin="16dp"
         android:text="Ajouter un item"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/buttonDeleteItem" />
+
+    <Button
+        android:id="@+id/buttonDeleteItem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Delete All"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/buttonAddItem"
         app:layout_constraintRight_toRightOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

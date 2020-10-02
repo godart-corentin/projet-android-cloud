@@ -1,17 +1,24 @@
 package com.jordroid.android_cloud_2020.repository
 
+import androidx.lifecycle.LiveData
+import com.jordroid.android_cloud_2020.architecture.CustomApplication
 import com.jordroid.android_cloud_2020.model.ObjectDataSample
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 
 class AndroidVersionRepository {
 
-    fun generateFakeData(): ArrayList<ObjectDataSample> {
-        return arrayListOf(
-            ObjectDataSample("Android Lollipop", 5, "url"),
-            ObjectDataSample("Android Marshmallow", 6, "url"),
-            ObjectDataSample("Android Nougat", 7, "url"),
-            ObjectDataSample("Android Oreo", 8, "url"),
-            ObjectDataSample("Android Pie", 9, "url"),
-            ObjectDataSample("Android Q", 10, "url")
-        )
+    private val mAndroidVersionDao = CustomApplication.instance.mApplicationDatabase.mAndroidVersionDao()
+
+    fun selectAllAndroidVersion() : LiveData<List<ObjectDataSample>> {
+        return mAndroidVersionDao.selectAll()
+    }
+
+    suspend fun insertAndroidVersion(objectDataSample: ObjectDataSample) = withContext(Dispatchers.IO) {
+        mAndroidVersionDao.insert(objectDataSample)
+    }
+
+    suspend fun deleteAllAndroidVersion() = withContext(Dispatchers.IO) {
+        mAndroidVersionDao.deleteAll()
     }
 }
