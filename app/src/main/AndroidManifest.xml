@@ -4,6 +4,9 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <application
         android:name=".architecture.CustomApplication"
         android:allowBackup="false"
@@ -15,18 +18,34 @@
         <activity android:name=".view.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- Parent activity means we will have back button in top of activity and go to the specified activity -->
-        <activity android:name=".view.FirstActivity" android:parentActivityName=".view.MainActivity"/>
-        <activity android:name=".view.SecondActivity" android:parentActivityName=".view.FirstActivity"/>
-        <activity android:name=".view.RecyclerViewActivity" android:parentActivityName=".view.MainActivity"/>
-        <activity android:name=".view.ChainConstraintActivity" android:parentActivityName=".view.MainActivity"/>
-        <activity android:name=".view.StringsActivity" android:parentActivityName=".view.MainActivity"/>
-        <activity android:name=".view.ResourceActivity" android:parentActivityName=".view.MainActivity"/>
-        <activity android:name=".view.ValuesLandActivity" android:parentActivityName=".view.MainActivity"/>
+        </activity> <!-- Parent activity means we will have back button in top of activity and go to the specified activity -->
+        <activity
+            android:name=".view.FirstActivity"
+            android:parentActivityName=".view.MainActivity" />
+        <activity
+            android:name=".view.SecondActivity"
+            android:parentActivityName=".view.FirstActivity" />
+        <activity
+            android:name=".view.RecyclerViewActivity"
+            android:parentActivityName=".view.MainActivity" />
+        <activity
+            android:name=".view.ChainConstraintActivity"
+            android:parentActivityName=".view.MainActivity" />
+        <activity
+            android:name=".view.StringsActivity"
+            android:parentActivityName=".view.MainActivity" />
+        <activity
+            android:name=".view.ResourceActivity"
+            android:parentActivityName=".view.MainActivity" />
+        <activity
+            android:name=".view.ValuesLandActivity"
+            android:parentActivityName=".view.MainActivity" />
+        <activity
+            android:name=".view.PermissionActivity"
+            android:parentActivityName=".view.MainActivity" />
     </application>
 
 </manifest>

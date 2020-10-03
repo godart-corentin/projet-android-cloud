@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         mainButtonActivityStrings.setOnClickListener { goToString() }
         mainButtonActivityResource.setOnClickListener { goToResources() }
         mainButtonActivityValuesLand.setOnClickListener { goToValuesLand() }
+        mainButtonActivityPermission.setOnClickListener { goToPermission() }
     }
 
     /**
@@ -46,5 +47,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun goToValuesLand() {
         startActivity(Intent(this, ValuesLandActivity::class.java))
+    }
+
+    private fun goToPermission() {
+        startActivity(Intent(this, PermissionActivity::class.java))
     }
 }
