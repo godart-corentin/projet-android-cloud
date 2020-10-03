@@ -1,4 +1,4 @@
-package com.jordroid.android_cloud_2020.view
+package com.jordroid.android_cloud_2020.view.adapter
 
 import android.content.Context
 import android.view.LayoutInflater

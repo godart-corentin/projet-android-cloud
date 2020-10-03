@@ -7,27 +7,27 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.jordroid.android_cloud_2020.R
-import com.jordroid.android_cloud_2020.model.ObjectDataSample
-import com.jordroid.android_cloud_2020.viewmodel.AndroidVersionViewModel
+import com.jordroid.android_cloud_2020.model.ChuckNorrisQuote
+import com.jordroid.android_cloud_2020.view.adapter.ChuckNorrisQuoteAdapter
+import com.jordroid.android_cloud_2020.viewmodel.ChuckNorrisViewModel
 import kotlinx.android.synthetic.main.activity_recycler_view.*
 import kotlin.collections.ArrayList
-import kotlin.random.Random
 
 class RecyclerViewActivity : AppCompatActivity() {
 
     // We need variable of our adapter
-    private lateinit var mAdapter: AndroidVersionAdapter
-    private lateinit var mViewModel: AndroidVersionViewModel
-    private var mObserverAndroidVersion = Observer<List<ObjectDataSample>> {
+    private lateinit var mAdapter: ChuckNorrisQuoteAdapter
+    private lateinit var mViewModel: ChuckNorrisViewModel
+    private var mObserverAndroidVersion = Observer<List<ChuckNorrisQuote>> {
         updateRecyclerView(ArrayList(it))
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recycler_view)
-        mViewModel = ViewModelProvider(this)[AndroidVersionViewModel::class.java]
+        mViewModel = ViewModelProvider(this)[ChuckNorrisViewModel::class.java]
         // Create the instance of adapter
-        mAdapter = AndroidVersionAdapter(this)
+        mAdapter = ChuckNorrisQuoteAdapter(this)
         // We define the style
         recyclerView.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
         // We set the adapter to recycler view
@@ -39,24 +39,23 @@ class RecyclerViewActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-        mViewModel.mAndroidVersionLiveData.observe(this, mObserverAndroidVersion)
+        mViewModel.mChuckNorrisQuoteLiveData.observe(this, mObserverAndroidVersion)
     }
 
     override fun onStop() {
-        mViewModel.mAndroidVersionLiveData.removeObserver(mObserverAndroidVersion)
+        mViewModel.mChuckNorrisQuoteLiveData.removeObserver(mObserverAndroidVersion)
         super.onStop()
     }
 
-    private fun updateRecyclerView(newList: ArrayList<ObjectDataSample>) {
+    private fun updateRecyclerView(newList: ArrayList<ChuckNorrisQuote>) {
         mAdapter.rebuild(newList)
     }
 
     private fun addRandomAndroidVersion() {
-        val random = Random.nextInt(0, 1000)
-        mViewModel.insertAndroidVersion("Android $random", random, "url:$random")
+        mViewModel.fetchNewQuote()
     }
 
     private fun deleteAndroidVersion() {
-        mViewModel.deleteAllAndroidVersion()
+        mViewModel.deleteAllQuote()
     }
 }

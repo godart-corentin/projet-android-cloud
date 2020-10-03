@@ -11,8 +11,7 @@ import kotlinx.coroutines.launch
 class AndroidVersionViewModel : ViewModel() {
 
     private val mAndroidVersionRepository: AndroidVersionRepository by lazy { AndroidVersionRepository() }
-    var mAndroidVersionLiveData: LiveData<List<ObjectDataSample>> =
-        mAndroidVersionRepository.selectAllAndroidVersion()
+    var mAndroidVersionLiveData: LiveData<List<ObjectDataSample>> = mAndroidVersionRepository.selectAllAndroidVersion()
 
     fun insertAndroidVersion(androidName: String, androidCode: Int, url: String) {
         viewModelScope.launch(Dispatchers.IO) {
