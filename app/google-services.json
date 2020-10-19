@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "825739850622",
+    "firebase_url": "https://android-cloud-2020-97316.firebaseio.com",
+    "project_id": "android-cloud-2020-97316",
+    "storage_bucket": "android-cloud-2020-97316.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:825739850622:android:741987446877646d21f92f",
+        "android_client_info": {
+          "package_name": "com.jordroid.android_cloud_2020"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "825739850622-jtp0vjad5ctbb014536au0clkt3lca87.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBohS6H8DtvhzZ-PFPTjY0faoD9FlBC_FQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "825739850622-jtp0vjad5ctbb014536au0clkt3lca87.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
