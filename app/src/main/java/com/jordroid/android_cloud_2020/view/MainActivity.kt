@@ -4,10 +4,10 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.jordroid.android_cloud_2020.R
+import com.jordroid.android_cloud_2020.firebase.view.FirebaseLoginActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         mainButtonActivityResource.setOnClickListener { goToResources() }
         mainButtonActivityValuesLand.setOnClickListener { goToValuesLand() }
         mainButtonActivityPermission.setOnClickListener { goToPermission() }
+        mainButtonActivityFirebase.setOnClickListener { goToFirebase() }
     }
 
     /**
@@ -51,5 +52,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun goToPermission() {
         startActivity(Intent(this, PermissionActivity::class.java))
+    }
+
+    private fun goToFirebase() {
+        startActivity(Intent(this, FirebaseLoginActivity::class.java))
     }
 }

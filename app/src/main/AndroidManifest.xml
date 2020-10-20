@@ -46,6 +46,9 @@
         <activity
             android:name=".view.PermissionActivity"
             android:parentActivityName=".view.MainActivity" />
+        <activity
+            android:name=".firebase.view.FirebaseLoginActivity"
+            android:parentActivityName=".view.MainActivity" />
         <service
             android:name=".service.MyFirebaseMessagingService"
             android:exported="false">
