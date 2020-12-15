@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.jordroid.android_cloud_2020">
+    package="com.godartcn.projetandroidcloud">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
@@ -15,6 +14,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".view.RetrofitActivity"></activity>
         <activity android:name=".view.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,32 +23,12 @@
             </intent-filter>
         </activity> <!-- Parent activity means we will have back button in top of activity and go to the specified activity -->
         <activity
-            android:name=".view.FirstActivity"
-            android:parentActivityName=".view.MainActivity" />
-        <activity
-            android:name=".view.SecondActivity"
-            android:parentActivityName=".view.FirstActivity" />
-        <activity
             android:name=".view.RecyclerViewActivity"
-            android:parentActivityName=".view.MainActivity" />
-        <activity
-            android:name=".view.ChainConstraintActivity"
-            android:parentActivityName=".view.MainActivity" />
-        <activity
-            android:name=".view.StringsActivity"
-            android:parentActivityName=".view.MainActivity" />
-        <activity
-            android:name=".view.ResourceActivity"
-            android:parentActivityName=".view.MainActivity" />
-        <activity
-            android:name=".view.ValuesLandActivity"
-            android:parentActivityName=".view.MainActivity" />
-        <activity
-            android:name=".view.PermissionActivity"
             android:parentActivityName=".view.MainActivity" />
         <activity
             android:name=".firebase.view.FirebaseLoginActivity"
             android:parentActivityName=".view.MainActivity" />
+
         <service
             android:name=".service.MyFirebaseMessagingService"
             android:exported="false">

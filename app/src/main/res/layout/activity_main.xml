@@ -14,106 +14,60 @@
         android:paddingRight="16dp"
         tools:context=".view.MainActivity">
 
-        <ImageView
-            android:id="@+id/mainImageViewLogo"
-            android:layout_width="wrap_content"
-            android:layout_height="128dp"
-            android:layout_marginTop="32dp"
-            android:src="@drawable/ic_jordroid"
-            app:layout_constraintLeft_toLeftOf="parent"
+        <Button
+            android:id="@+id/btnListActivity"
+            style="@style/buttonMainActivity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:text="ListActivity"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <Button
+            android:id="@+id/btnRetrofitActivity"
+            style="@style/buttonMainActivity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="RetrofitActivity"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnListActivity" />
+
+        <Button
+            android:id="@+id/btnFirebaseActivity"
+            style="@style/buttonMainActivity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="FirebaseActivity"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnRetrofitActivity" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="@string/app_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/mainButtonActivityIntent"
-            style="@style/buttonMainActivity"
-            android:layout_width="0dp"
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Activity with intent"
-            app:layout_constraintBottom_toTopOf="@+id/mainButtonRecyclerView"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/mainImageViewLogo" />
-
-        <Button
-            android:id="@+id/mainButtonRecyclerView"
-            style="@style/buttonMainActivity"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="RecyclerView"
-            app:layout_constraintBottom_toTopOf="@+id/mainButtonActivityChain"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/mainButtonActivityIntent" />
-
-        <Button
-            android:id="@+id/mainButtonActivityChain"
-            style="@style/buttonMainActivity"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="Chains constraint layout"
-            app:layout_constraintBottom_toTopOf="@+id/mainButtonActivityStrings"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/mainButtonRecyclerView" />
-
-        <Button
-            android:id="@+id/mainButtonActivityStrings"
-            style="@style/buttonMainActivity"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="16dp"
-            android:text="Strings"
-            app:layout_constraintBottom_toTopOf="@+id/mainButtonActivityValuesLand"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toLeftOf="@+id/mainButtonActivityResource"
-            app:layout_constraintTop_toBottomOf="@id/mainButtonActivityChain" />
-
-        <Button
-            android:id="@+id/mainButtonActivityResource"
-            style="@style/buttonMainActivity"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:text="Ressources"
-            app:layout_constraintBottom_toTopOf="@+id/mainButtonActivityValuesLand"
-            app:layout_constraintLeft_toRightOf="@+id/mainButtonActivityStrings"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/mainButtonActivityChain" />
-
-        <Button
-            android:id="@+id/mainButtonActivityValuesLand"
-            style="@style/buttonMainActivity"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="Values land"
-            app:layout_constraintBottom_toTopOf="@+id/mainButtonActivityPermission"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/mainButtonActivityStrings" />
-
-        <Button
-            android:id="@+id/mainButtonActivityPermission"
-            style="@style/buttonMainActivity"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="Permission"
-            app:layout_constraintBottom_toTopOf="@+id/mainButtonActivityFirebase"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/mainButtonActivityValuesLand" />
-
-        <Button
-            android:id="@+id/mainButtonActivityFirebase"
-            style="@style/buttonMainActivity"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="Firebase"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/mainButtonActivityPermission" />
+            android:layout_marginTop="25dp"
+            android:text="@string/author"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

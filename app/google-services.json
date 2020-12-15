@@ -1,34 +1,33 @@
 {
   "project_info": {
-    "project_number": "825739850622",
-    "firebase_url": "https://android-cloud-2020-97316.firebaseio.com",
-    "project_id": "android-cloud-2020-97316",
-    "storage_bucket": "android-cloud-2020-97316.appspot.com"
+    "project_number": "1030323766246",
+    "project_id": "projet-android-ea1d0",
+    "storage_bucket": "projet-android-ea1d0.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:825739850622:android:741987446877646d21f92f",
+        "mobilesdk_app_id": "1:1030323766246:android:557149dd1d4fa4210dcc27",
         "android_client_info": {
-          "package_name": "com.jordroid.android_cloud_2020"
+          "package_name": "com.godartcn.projetandroidcloud"
         }
       },
       "oauth_client": [
         {
-          "client_id": "825739850622-jtp0vjad5ctbb014536au0clkt3lca87.apps.googleusercontent.com",
+          "client_id": "1030323766246-ie4pk42q69fttfoh993jji68ss5vqluj.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBohS6H8DtvhzZ-PFPTjY0faoD9FlBC_FQ"
+          "current_key": "AIzaSyCNs4LZCqA6JzxYdgNGZU6URaGC3EKC9rk"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "825739850622-jtp0vjad5ctbb014536au0clkt3lca87.apps.googleusercontent.com",
+              "client_id": "1030323766246-ie4pk42q69fttfoh993jji68ss5vqluj.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -5,10 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="96dp"
     android:layout_margin="8dp"
-    android:background="@drawable/custom_background">
+    android:background="@drawable/custom_background"
+    android:id="@+id/wrapperItemRecyclerView"
+    >
 
     <ImageView
-        android:id="@+id/itemRecyclerViewVersionImage"
+        android:id="@+id/imageViewGridLayoutItemRecyclerView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="16dp"
@@ -18,29 +20,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/textViewGridLayoutItemRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:textStyle="bold"
-        android:id="@+id/itemRecyclerViewVersionName"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/itemRecyclerViewVersionCode"
-        app:layout_constraintLeft_toRightOf="@+id/itemRecyclerViewVersionImage"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/itemRecyclerViewVersionImage"
-        app:layout_constraintVertical_chainStyle="spread"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageViewGridLayoutItemRecyclerView"
+        app:layout_constraintTop_toTopOf="parent"
         tools:text="@tools:sample/cities" />
-
-    <TextView
-        android:id="@+id/itemRecyclerViewVersionCode"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/itemRecyclerViewVersionImage"
-        app:layout_constraintLeft_toRightOf="@id/itemRecyclerViewVersionImage"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/itemRecyclerViewVersionName"
-        tools:text="@tools:sample/full_names" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
