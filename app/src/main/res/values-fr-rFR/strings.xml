@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Android-cloud-2020</string>
+    <string name="author">GODART Corentin</string>
+    <string name="name">Nom :</string>
+    <string name="gender">Genre :</string>
+    <string name="culture">Culture :</string>
+    <string name="birthDate">Date de naissance :</string>
+    <string name="deathDate">Date de mort :</string>
+</resources>

@@ -9,6 +9,9 @@ import com.godartcn.projetandroidcloud.R
 import com.godartcn.projetandroidcloud.model.GOTCharacter
 import com.godartcn.projetandroidcloud.view.adapter.GOTCharacterAdapter
 import com.godartcn.projetandroidcloud.viewmodel.GOTCharacterViewModel
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_recycler_view.*
 import kotlin.random.Random
 

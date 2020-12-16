@@ -5,6 +5,7 @@ import com.godartcn.projetandroidcloud.architecture.CustomApplication
 import com.godartcn.projetandroidcloud.architecture.RetrofitBuilder
 import com.godartcn.projetandroidcloud.model.Avatar
 import com.godartcn.projetandroidcloud.model.GOTCharacter
+import com.google.firebase.database.FirebaseDatabase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
@@ -24,7 +25,10 @@ class GOTCharacterRepository {
     }
 
     suspend fun fetchData(random: String) {
-        insert(RetrofitBuilder.getGOTCharacter().getRandomCharacter(random))
+        val character = RetrofitBuilder.getGOTCharacter().getRandomCharacter(random)
+        insert(character)
+        val database = FirebaseDatabase.getInstance("https://projet-android-ea1d0-default-rtdb.europe-west1.firebasedatabase.app/")
+        val myRef = database.getReference("character/${random}")
+        myRef.setValue(character)
     }
-
 }
