@@ -11,6 +11,7 @@ import kotlinx.coroutines.withContext
 
 class GOTCharacterRepository {
     private val dao = CustomApplication.instance.mApplicationDatabase.mGOTCharacterDao()
+    private val database = FirebaseDatabase.getInstance("https://projet-android-ea1d0-default-rtdb.europe-west1.firebasedatabase.app/")
 
     fun getDataFromDatabase(): LiveData<List<GOTCharacter>> {
         return dao.selectAll()
@@ -22,12 +23,12 @@ class GOTCharacterRepository {
 
     suspend fun removeAll() = withContext(Dispatchers.IO) {
         dao.deleteAll()
+        database.getReference("character").setValue(null)
     }
 
     suspend fun fetchData(random: String) {
         val character = RetrofitBuilder.getGOTCharacter().getRandomCharacter(random)
         insert(character)
-        val database = FirebaseDatabase.getInstance("https://projet-android-ea1d0-default-rtdb.europe-west1.firebasedatabase.app/")
         val myRef = database.getReference("character/${random}")
         myRef.setValue(character)
     }
